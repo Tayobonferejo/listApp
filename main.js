@@ -32,10 +32,17 @@ form.addEventListener('submit', function(event){
 mySection.addEventListener("click", function(event) {
   if (event.target.tagName === "A") {
     event.preventDefault();
-    alert("hello world");
     event.target.parentElement.remove();
   }
+
+  const valueToDelete = event.target.parentElement.textContent.replace("delete", "").trim();
+  const index = toList.indexOf(valueToDelete);
+    if (index > -1) {
+    toList.splice(index, 1);
+    }
 });
+
+
 
 
 

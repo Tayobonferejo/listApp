@@ -17,27 +17,23 @@ main {
     justify-content: center;
     width: 25%;
     border: 1px solid black;
+    margin-top: 5rem;
+    padding: 2rem;
 
 }
 
-/* main > div {
-    display: flex;
-    background-color: brown;
-} */
 
 input {
     height: 30px;
     padding: 1rem;
+
 }
 
 button {
-    height: 30px;
+    height: 35px;
     width: 100px;
-
     background-color: green;
 }
 
-/* #listSection {
-    display:flex;
-} */
+
 
