@@ -15,7 +15,7 @@ form.addEventListener('submit', function(event){
         toList.push(formValue);
         if(formValue){
             const para = document.createElement("p");
-            para.textContent = `${formValue}`;
+            para.innerHTML = `${formValue}<a href="https://www.w3schools.com/jsref/met_document_createelement.asp">delete</a>`;
             mySection.appendChild(para);
 
         }
@@ -26,6 +26,20 @@ form.addEventListener('submit', function(event){
     };
 
 });
+
+
+// Event delegation: listen for clicks on <a> inside #listSection
+mySection.addEventListener("click", function(event) {
+  if (event.target.tagName === "A") {
+    event.preventDefault();
+    alert("hello world");
+    event.target.parentElement.remove();
+  }
+});
+
+
+
+
 
 
 
